@@ -1,4 +1,4 @@
-# Top Spinner Cricket recreation
+# Top Spinner Cricket resurrection
 
 This is an original, editable browser recreation inspired by the screenshots of Bennett Foddy's Flash game. It does not contain the original ActionScript or artwork. The player, bat, wicket, ball, and field are drawn by JavaScript on a canvas.
 
