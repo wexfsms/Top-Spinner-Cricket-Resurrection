@@ -1,0 +1,37 @@
+:root{color-scheme:dark;font-family:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 15%,#33302b,#11100f 72%);color:#f5ecd1;padding:18px}
+    .game{width:min(920px,100%);border:3px solid #473b25;box-shadow:0 22px 60px #0009,0 0 0 1px #a58b4b;background:#170d04}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 15px;background:linear-gradient(#2c1b0b,#170d04);border-bottom:2px solid #9a762e}
+    .brand{font-weight:1000;line-height:.86;letter-spacing:-.08em;font-size:24px;color:#f3dd19;text-shadow:2px 2px #6a2600;white-space:nowrap}
+    .brand b{color:#f20c0d;font-size:28px;display:inline-block;transform:rotate(-8deg)}
+    .bar small{font-size:12px;font-weight:700;color:#c7a768;letter-spacing:.025em}
+    .actions{display:flex;gap:7px;flex-shrink:0}
+    .challenge-settings{display:flex;align-items:center;gap:10px;padding:6px 14px;background:#241709;border-bottom:1px solid #6b4c1c;color:#e4c879;font-size:12px;font-weight:700}
+    .challenge-settings select{background:#f4e0a3;color:#291907;border:1px solid #a78346;border-radius:3px;padding:5px 8px;font:700 12px Arial,Helvetica,sans-serif;cursor:pointer}
+    .challenge-settings select:focus-visible{outline:3px solid #ffed5b;outline-offset:2px}
+    .challenge-settings span{color:#ae9362;font-weight:400}
+    button{cursor:pointer;font:700 12px Arial,Helvetica,sans-serif;border:1px solid #bea268;border-bottom-color:#765b2b;border-radius:3px;background:#e8d18b;color:#291907;padding:7px 10px;transition:filter .15s,transform .15s}
+    button:hover{filter:brightness(1.12)}button:active{transform:translateY(1px)}button:focus-visible{outline:3px solid #ffed5b;outline-offset:2px}
+    .stage{position:relative;width:100%;aspect-ratio:800/520;overflow:hidden;touch-action:none;cursor:crosshair}
+    canvas{width:100%;height:100%;display:block}
+    .overlay{position:absolute;inset:0;display:grid;place-items:center;background:#100b0359;pointer-events:none}
+    .overlay[hidden]{display:none}
+    .card{pointer-events:auto;text-align:center;width:min(480px,84%);background:linear-gradient(155deg,#e1c658,#b79a41);border:6px solid #f5d876;outline:2px solid #aa8b36;box-shadow:0 10px 22px #22160671;color:#f00;padding:19px 17px 17px}
+    .card h1{font-size:clamp(30px,6vw,54px);margin:0;line-height:.95;letter-spacing:-.065em;font-weight:1000}
+    .card p{margin:9px auto 15px;color:#462706;font-weight:800;font-size:15px;line-height:1.4;max-width:360px}
+    .card .sub{font-size:19px;color:#ec080b;margin:1px 0 18px}
+    .card button{background:#f8e7a6;color:#e20905;font-size:17px;border:2px solid #fff0bf;padding:10px 20px;box-shadow:0 3px #82642a}
+    .card .hint{font-size:12px;color:#52320e;margin:13px 0 0;font-weight:700}
+    .card .target-line{margin:5px 0 13px;color:#52320e;font-weight:800;font-size:15px}
+    .card.victory{background:linear-gradient(155deg,#e8dc83,#b7ad56);color:#21732d}
+    .card.victory h1{font-size:clamp(30px,5vw,47px);letter-spacing:-.05em}
+    .card.victory .sub,.card.victory .result span{color:#26642d}
+    .card.victory button{color:#24652e}
+    .result{display:flex;align-items:center;justify-content:center;gap:10px;margin:19px 0 15px}
+    .result span{display:grid;gap:5px;min-width:0;flex:1;font-weight:1000;color:#ea0a08;font-size:16px}
+    .result strong{color:#333;background:#f4da84;font-size:24px;padding:6px 0}
+    .result em{font-style:normal;font-size:25px;font-weight:900}
+    .foot{padding:8px 14px;background:#211406;color:#b79857;font-size:12px;display:flex;gap:12px;justify-content:space-between;line-height:1.4}
+    .foot strong{color:#e1c474}
+    @media(max-width:600px){body{padding:5px}.bar{padding:8px;flex-wrap:wrap}.bar small{display:none}.brand{font-size:18px}.brand b{font-size:20px}.actions button{font-size:11px;padding:6px}.challenge-settings{flex-wrap:wrap;gap:5px}.challenge-settings span{width:100%}.foot{font-size:10px}.card{padding:11px}.card p{font-size:12px}.card .sub{font-size:14px}.result{gap:3px}.result span{font-size:11px}.result strong{font-size:18px}.result em{font-size:18px}}

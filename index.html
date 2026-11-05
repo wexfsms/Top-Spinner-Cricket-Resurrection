@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Top Spinner Cricket — recreation</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game" aria-label="Top Spinner Cricket recreation">
+    <div class="bar">
+      <div class="brand"><b>TOP</b> SPINNER</div>
+      <small>MOUSE CONTROLLED CRICKET · PHYSICS ARCADE</small>
+      <div class="actions"><button id="pause" type="button">Pause</button><button id="sound" type="button" aria-pressed="true">Sound on</button><button id="reset" type="button">Restart</button></div>
+    </div>
+    <div class="challenge-settings"><label for="difficulty">Target difficulty</label><select id="difficulty"></select><span>Applies to the next innings</span></div>
+    <div class="stage" id="stage">
+      <canvas id="field" width="800" height="520" aria-label="Cricket game field"></canvas>
+      <div class="overlay" id="ready">
+        <div class="card"><h1>TOP SPINNER!</h1><p>Choose a difficulty above, then chase a random run target. "Any target" can pick any number from 1 to 1000. Aim the bat tip with your mouse and sweep to hit.</p><button id="start" type="button">START BATTING</button><div class="hint">Colored stripes score runs · the bat and ball can both knock down your stumps</div></div>
+      </div>
+      <div class="overlay" id="over" hidden>
+        <div class="card"><h1>HOWZAT!</h1><div class="sub">(you are out)</div><div class="result"><span><strong id="endRuns">0</strong>RUNS</span><em>×</em><span><strong id="endRate">0.00</strong>S/RATE</span><em>=</em><span><strong id="endScore">0</strong>SCORE</span></div><p class="target-line"><strong id="endTier">Easy</strong> · Target: <strong id="endTarget">0</strong> runs</p><button id="again" type="button">Try a new target</button></div>
+      </div>
+      <div class="overlay" id="won" hidden>
+        <div class="card victory"><h1>TARGET CHASED!</h1><div class="sub"><strong id="winTier">Easy</strong> · Target: <strong id="winTarget">0</strong> runs</div><div class="result"><span><strong id="winRuns">0</strong>RUNS</span><em>×</em><span><strong id="winRate">0.00</strong>S/RATE</span><em>=</em><span><strong id="winScore">0</strong>SCORE</span></div><button id="next" type="button">Next target</button></div>
+      </div>
+    </div>
+    <div class="foot"><span><strong>HOW TO PLAY:</strong> Chase the target. Aim the bat tip with your mouse. Colored edges score 2, 4, or 6.</span><span>Keep both the bat and ball away from your stumps.</span></div>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
